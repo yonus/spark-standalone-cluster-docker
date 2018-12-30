@@ -1,0 +1,13 @@
+spark-submit \
+  --class org.apache.spark.examples.SparkPi \
+  --master spark://master:7077 \
+  --executor-memory 1G \
+  --total-executor-cores 4 \
+    /spark-2.4.0-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.4.0.jar  \
+    1000
+
+
+spark-submit \
+  --master spark://master:7077 \
+    /spark-2.4.0-bin-hadoop2.7/examples/src/main/python/pi.py  \
+    1000
